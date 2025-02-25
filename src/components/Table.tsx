@@ -24,7 +24,8 @@ export const Table = ({ db, setedit, edit }: { db: Tipos[], setedit: any, edit: 
                                 <td>edad: {e.edad}</td>
                                 <td>dni: {e.dni}</td>
                                 <td>
-                                    <button onClick={() => setedit(db)}>editar</button>
+                                    {/* se le pasa el cuerpo completo de lo seleccionado */}
+                                    <button onClick={() => setedit(e)}>editar</button>
                                     {/* <button>eliminar</button> */}
                                 </td>
                             </tr>

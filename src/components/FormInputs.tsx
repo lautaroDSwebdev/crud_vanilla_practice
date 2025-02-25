@@ -21,16 +21,13 @@ export const FormInputs = ({ edit, setedit, Update, Create }) => {
         })
 
         console.log("datos del change")
-        console.log(e.target.value)
-        console.log(e.target.name)
     }
     const handSubmit = (e: TipoEventoChange) => {
         e.preventDefault()
+        // if (!form.edad || !form.dni || !form.apellido || !form.nombre) return console.log("completar datos")
+        form.id === null ? Create(form) : Update(form) 
         
-        if (!form.edad || !form.dni || !form.apellido || !form.nombre) return console.log("completar datos")
-
-        form.id === null ? Create(form) : Update(edit)
-        return Reset()
+        return  Reset()
     }
     return (
         <div>

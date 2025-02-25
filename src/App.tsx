@@ -28,19 +28,19 @@ export const App = () => {
   }, [api])
   const Create = (data: Tipos) => {
     console.log("Peticion")
-    console.log(data)
+    // console.log(data)
     data.id = Date.now()
-    const op = { body: data, headers: { "content-type": "application/json" } }
+    const op = { body: data, headers: { "Content-Type": "application/json" } }
 
     helpHttp().post(api, op).then(e => {
       e.err ? seterror(true) : setDB([...db, e])
     })
   }
   const Update = (data: Tipos) => {
-    // console.log(edit)
+    console.log(edit)
     const endp = `${api}/${data.id}`
     console.log(endp)
-    const op = { body: edit, headers: { "content-type": "application/json" } }
+    const op = { body: edit, headers: { "Content-Type": "application/json" } }
     helpHttp().put(endp, op).then(e => {
       
       if (e.err){
