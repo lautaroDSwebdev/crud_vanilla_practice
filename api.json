@@ -1,0 +1,32 @@
+{
+  "persona": [
+    {
+      "id": "1740333627067",
+      "nombre": "Lautaro",
+      "apellido": "Queseyo",
+      "edad": "15",
+      "dni": "56565456"
+    },
+    {
+      "id": "1740333757623",
+      "nombre": "Hola, esto es una prueba",
+      "apellido": "Di Salvo",
+      "edad": "15",
+      "dni": "56565456"
+    },
+    {
+      "id": 1740338313563,
+      "nombre": "Fernando",
+      "apellido": "dsvfdvd",
+      "edad": "2",
+      "dni": "54654"
+    },
+    {
+      "id": 1740339939719,
+      "nombre": "Bruno",
+      "apellido": "dsvfdvd",
+      "edad": "3",
+      "dni": "56765765"
+    }
+  ]
+}

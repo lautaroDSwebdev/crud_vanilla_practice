@@ -1,0 +1,48 @@
+.components{
+    display: flex;
+    justify-content: space-around;
+    max-width: 900px;
+    margin: auto;
+    gap: 3rem;
+    @media (width < 768px) {
+        flex-flow: column;
+        justify-content: space-around;
+    }
+}
+table{
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+tr{
+    display: flex;
+    gap: 10px;
+    &:nth-child(even){
+        background: #cac8c8;
+    }
+    
+}
+form{
+    display: flex;
+    flex-flow: column;
+    width: fit-content;
+    gap: 1rem;
+    input{
+        border-radius: 8px;
+        padding: 5px; 
+        font-size: 16px;
+    }
+}
+button{
+    padding: 5px;
+    border-radius: 5px ;
+    cursor: pointer;
+}
+.div_table{
+    position: relative;
+    border-top: 1px  solid #b3afaf;
+    border-bottom: 1px  solid #b3afaf;
+    max-width: 300px;
+}
