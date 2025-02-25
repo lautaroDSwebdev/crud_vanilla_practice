@@ -4,9 +4,12 @@ import { TipoEventoChange } from "../typex"
 
 export const FormInputs = ({ edit, setedit, Update, Create }) => {
     const [form, setform] = useState(dataInicial)
+    console.log(form)
     // console.log("Cuerpo del edit desde form")
     // console.log(edit)
     useEffect(() => {
+        // como le pasamos la data seleccionada del setedit pues recibimos
+        //  la data a nivel global del edit, cosa que si viene data, se inserta en setform
         edit ? setform(edit) : setform(dataInicial)
     }, [edit])
 
@@ -15,18 +18,17 @@ export const FormInputs = ({ edit, setedit, Update, Create }) => {
         setedit(null)
     }
     const handleChange = (e: TipoEventoChange) => {
+        // y al estar conectado el setform al formulario, le pasa lo seleccionado a los inputs
         setform({
             ...form,
             [e.target.name]: e.target.value,
         })
-
         console.log("datos del change")
     }
     const handSubmit = (e: TipoEventoChange) => {
         e.preventDefault()
         // if (!form.edad || !form.dni || !form.apellido || !form.nombre) return console.log("completar datos")
         form.id === null ? Create(form) : Update(form) 
-        
         return  Reset()
     }
     return (
